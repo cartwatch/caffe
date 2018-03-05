@@ -1,14 +1,14 @@
 import numpy as np  
 import sys,os  
-caffe_root = '/home/yaochuanqi/ssd/caffe/'
+caffe_root = '/caffe/'
 sys.path.insert(0, caffe_root + 'python')  
 import caffe  
 
-train_proto = 'MobileNetSSD_train.prototxt'  
-train_model = 'mobilenet_iter_73000.caffemodel'  #should be your snapshot caffemodel
+train_proto = '/caffe/examples/example/MobileNetSSD_train.prototxt'  
+train_model = '/caffe/examples/snapshot/mobilenet_iter_80000.caffemodel'  #should be your snapshot caffemodel
 
-deploy_proto = 'MobileNetSSD_deploy.prototxt'  
-save_model = 'MobileNetSSD_deploy.caffemodel'
+deploy_proto = '/caffe/examples/example/MobileNetSSD_deploy.prototxt'  
+save_model = '/caffe/examples/snapshot/MobileNetSSD_deploy.caffemodel'
 
 def merge_bn(net, nob):
     '''

@@ -958,6 +958,7 @@ void MineHardExamples(const Blob<Dtype>& conf_blob,
           }
         }
         num_sel = std::min(static_cast<int>(num_pos * neg_pos_ratio), num_sel);
+        num_sel = std::min(10, num_sel);
       } else if (mining_type == MultiBoxLossParameter_MiningType_HARD_EXAMPLE) {
         CHECK_GT(sample_size, 0);
         num_sel = std::min(sample_size, num_sel);

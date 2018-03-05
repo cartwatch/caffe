@@ -1,5 +1,6 @@
 ## General
-
+**/*.caffemodel
+examples/snapshot/
 # Compiled Object files
 *.slo
 *.lo
