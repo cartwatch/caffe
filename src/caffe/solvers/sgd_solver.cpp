@@ -51,7 +51,7 @@ Dtype SGDSolver<Dtype>::GetLearningRate() {
   int cycle = itr / (2*this->param_.stepsize()); float x = (float) (itr - (2*cycle+1)*this->param_.stepsize()); 
   x = x / this->param_.stepsize(); rate = this->param_.base_lr() + (this->param_.max_lr()- this->param_.base_lr()) * std::min(double(1), std::max(double(0), (1.0 - fabs(x))/pow(2.0,double(cycle)))); } else { 
   rate = this->param_.base_lr(); 
-  } else if (lr_policy == "multistep") {
+  }} else if (lr_policy == "multistep") {
     if (this->current_step_ < this->param_.stepvalue_size() &&
           this->iter_ >= this->param_.stepvalue(this->current_step_)) {
       this->current_step_++;
