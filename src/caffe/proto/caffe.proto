@@ -310,7 +310,8 @@ message SolverParameter {
   repeated int32 stepvalue = 34;
   // the stepsize for learning rate policy "plateau"
   repeated int32 plateau_winsize = 43;
-
+  optional float start_lr_policy = 44; 
+  optional float max_lr = 45; // The maximum learning rate for CLR policies
   // Set clip_gradients to >= 0 to clip parameter gradients to that L2 norm,
   // whenever their actual L2 norm is larger.
   optional float clip_gradients = 35 [default = -1];
